@@ -22,7 +22,10 @@ function titleClickHandler(event) {
   for (let activeArticle of activeArticles) {
     activeArticle.classList.remove("active");
   }
+
   /* get 'href' attribute from the clicked link */
+  const articleSelector = clickedElement.getAttribute("href");
+  console.log("articleSelector:", articleSelector);
 
   /* find the correct article using the selector (value of 'href' attribute) */
 
