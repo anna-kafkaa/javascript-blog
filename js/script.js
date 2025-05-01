@@ -161,8 +161,9 @@ function tagClickHandler(event){
 
     /* add class active */
     tagLink.classList.add('active');
-    
+
   /* END LOOP: for each found tag link */
+  }
 
   /* execute function "generateTitleLinks" with article selector as argument */
   generateTitleLinks('[data-tags~="' + tag + '"]');
@@ -170,6 +171,7 @@ function tagClickHandler(event){
 
 function addClickListenersToTags(){
   /* find all links to tags */
+  const tagLinks = document.querySelectorAll('a[href^="#tag-"]');
 
   /* START LOOP: for each link */
 
