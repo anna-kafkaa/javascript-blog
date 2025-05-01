@@ -184,3 +184,14 @@ function addClickListenersToTags(){
 }
 
 addClickListenersToTags();
+
+function generateAuthors() {
+  const articles = document.querySelectorAll(optArticleSelector);
+
+  for (let article of articles) {
+    const authorWrapper = article.querySelector(optArticleAuthorSelector);
+    const author = article.getAttribute('data-author');
+    const authorHTML = '<a href="#author-' + author + '">' + author + '</a>';
+    authorWrapper.innerHTML = authorHTML;
+  }
+}
