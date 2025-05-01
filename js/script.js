@@ -157,6 +157,7 @@ function tagClickHandler(event){
   const tagLinks = document.querySelectorAll('a[href="' + href + '"]');
 
   /* START LOOP: for each found tag link */
+  for (let tagLink of tagLinks) {
 
     /* add class active */
 
