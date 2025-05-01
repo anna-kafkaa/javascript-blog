@@ -160,7 +160,8 @@ function tagClickHandler(event){
   for (let tagLink of tagLinks) {
 
     /* add class active */
-
+    tagLink.classList.add('active');
+    
   /* END LOOP: for each found tag link */
 
   /* execute function "generateTitleLinks" with article selector as argument */
