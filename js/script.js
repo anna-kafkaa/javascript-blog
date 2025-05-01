@@ -27,7 +27,7 @@ function titleClickHandler(event) {
   /* [DONE] remove class 'active' from all articles */
   const activeArticles = document.querySelectorAll('.posts .post.active');
   for (let activeArticle of activeArticles) {
-    activeArticle.classList.remove('ctive');
+    activeArticle.classList.remove('active');
   }
 
   /* [DONE] get 'href' attribute from the clicked link */
