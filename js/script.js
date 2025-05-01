@@ -198,3 +198,31 @@ function generateAuthors() {
 
 generateAuthors();
 
+function authorClickHandler(event) {
+  event.preventDefault();
+  const clickedElement = this;
+  const href = clickedElement.getAttribute('href');
+  const author = href.replace('#author-', '');
+
+  const activeAuthors = document.querySelectorAll('a.active[href^="#author-"]');
+  for (let activeAuthor of activeAuthors) {
+    activeAuthor.classList.remove('active');
+  }
+
+  const authorLinks = document.querySelectorAll('a[href="' + href + '"]');
+  for (let authorLink of authorLinks) {
+    authorLink.classList.add('active');
+  }
+
+  generateTitleLinks('[data-author="' + author + '"]');
+}
+
+function addClickListenersToAuthors() {
+  const authorLinks = document.querySelectorAll('a[href^="#author-"]');
+
+  for (let link of authorLinks) {
+    link.addEventListener('click', authorClickHandler);
+  }
+}
+
+addClickListenersToAuthors();
