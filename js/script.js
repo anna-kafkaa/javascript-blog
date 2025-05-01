@@ -114,9 +114,11 @@ function generateTags(){
       console.log(tag);
       /* generate HTML of the link */
       const tagHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
-      
-      /* add generated code to html variable */
 
+      /* add generated code to html variable */
+      html += tagHTML;
+    }
+    
     /* END LOOP: for each tag */
 
     /* insert HTML of all the links into the tags wrapper */
