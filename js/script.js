@@ -42,7 +42,7 @@ function titleClickHandler(event) {
 }
 
 /* Funkcja generująca listę linków */
-function generateTitleLinks(){
+function generateTitleLinks(customSelector = ''){
   /* [DONE] remove contents of titleList */
   const titleList = document.querySelector(optTitleListSelector);
   titleList.innerHTML = '';
