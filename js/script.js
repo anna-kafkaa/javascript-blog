@@ -118,8 +118,10 @@ function generateTags(){
       /* add generated code to html variable */
       html += tagHTML;
     }
-    
+
     /* END LOOP: for each tag */
+    tagsWrapper.innerHTML = html;
+    }
 
     /* insert HTML of all the links into the tags wrapper */
 
