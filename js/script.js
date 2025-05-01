@@ -122,7 +122,7 @@ function generateTags(){
     }
     /* insert HTML of all the links into the tags wrapper */
     tagsWrapper.innerHTML = html;
-    }
+  }
   /* END LOOP: for every article: */
 }
 
@@ -130,7 +130,8 @@ generateTags();
 
 function tagClickHandler(event){
   /* prevent default action for this event */
-
+  event.preventDefault();
+  
   /* make new constant named "clickedElement" and give it the value of "this" */
 
   /* make a new constant "href" and read the attribute "href" of the clicked element */
