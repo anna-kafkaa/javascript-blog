@@ -99,9 +99,10 @@ function generateTags(){
 
     /* find tags wrapper */
     const tagsWrapper = article.querySelector(optArticleTagsSelector);
-    
-    /* make html variable with empty string */
 
+    /* make html variable with empty string */
+    let html = '';
+    
     /* get tags from data-tags attribute */
 
     /* split tags into array */
