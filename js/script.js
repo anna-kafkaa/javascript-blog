@@ -259,7 +259,8 @@ function generateTags(){
   let allTags = {};
 
   /* find all articles */
-
+  const articles = document.querySelectorAll(optArticleSelector);
+  
   /* START LOOP: for every article: */
 
     /* find tags wrapper */
