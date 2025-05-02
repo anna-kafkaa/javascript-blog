@@ -9,6 +9,9 @@ const optArticleTagsSelector = '.post-tags .list';
 const optArticleAuthorSelector = '.post-author';
 const optTagsListSelector = '.list.tags';
 
+const optCloudClassCount = 5;
+const optCloudClassPrefix = 'tag-size-';
+
 /* Funkcja obsługująca kliknięcie w link */
 function titleClickHandler(event) {
   event.preventDefault();
