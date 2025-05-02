@@ -297,12 +297,14 @@ let allTagsHTML = '';
 
 /* [NEW] START LOOP: for each tag in allTags: */
 for (let tag in allTags) {
+  const tagLinkHTML = '<li>' + calculateTagClass(allTags[tag], tagsParam) + '</li>';
+  console.log('tagLinkHTML:', tagLinkHTML);
 
   /* [NEW] generate code of a link and add it to allTagsHTML */
-  allTagsHTML += tag + ' (' + allTags[tag] + ') ';
-}
+  allTagsHTML += tagLinkHTML;
 
 /* [NEW] END LOOP: for each tag in allTags: */
+}
 
 /* [NEW] add html from allTagsHTML to tagList */
 tagList.innerHTML = allTagsHTML;
