@@ -228,6 +228,21 @@ function addClickListenersToAuthors() {
 
 addClickListenersToAuthors();
 
+function calculateTagsParams(tags) {
+  const params = { min: 999999, max: 0 };
+
+  for (let tag in tags) {
+    if (tags[tag] > params.max) {
+      params.max = tags[tag];
+    }
+    if (tags[tag] < params.min) {
+      params.min = tags[tag];
+    }
+  }
+
+  return params;
+}
+
 function generateTags(){
   /* [NEW] create a new variable allTags with an empty array */
   let allTags = {};
