@@ -230,7 +230,7 @@ addClickListenersToAuthors();
 
 function generateTags(){
   /* [NEW] create a new variable allTags with an empty array */
-  let allTags = [];
+  let allTags = {};
 
   /* find all articles */
 
@@ -249,7 +249,7 @@ function generateTags(){
 
       /* generate HTML of the link */
       const tagHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
-      
+
       /* add generated code to html variable */
 
       /* [NEW] check if this link is NOT already in allTags */
