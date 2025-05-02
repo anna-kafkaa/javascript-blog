@@ -101,4 +101,49 @@ body {
 }
 .post-tags p {
   margin: 0 10px 0 0;
+}
+
+.tag-size-1 {
+  font-size: 80%;
+  color: #a0aec0;
+}
+
+.tag-size-2 {
+  font-size: 100%;
+  color: #718096;
+}
+
+.tag-size-3 {
+  font-size: 120%;
+  color: #4a5568;
+}
+
+.tag-size-4 {
+  font-size: 140%;
+  color: #2d3748;
+}
+
+.tag-size-5 {
+  font-size: 160%;
+  color: #1a202c;
+}
+
+.list.tags {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.list.tags li {
+  margin: 0;
+}
+.list.tags a {
+  text-decoration: none;
+  padding: 0.2em 0.5em;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+.list.tags a:hover {
+  background: #f0f0f0;
 }/*# sourceMappingURL=style.css.map */
