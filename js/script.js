@@ -277,7 +277,7 @@ let allTagsHTML = '';
 for (let tag in allTags) {
 
   /* [NEW] generate code of a link and add it to allTagsHTML */
-  allTagsHTML += '<li><a href="#tag-' + tag + '">' + tag + '</a> (' + allTags[tag] + ')</li>';
+  allTagsHTML += tag + ' (' + allTags[tag] + ') ';
 }
 
 /* [NEW] END LOOP: for each tag in allTags: */
