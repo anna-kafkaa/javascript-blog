@@ -254,9 +254,12 @@ function generateTags(){
 
       /* [NEW] check if this link is NOT already in allTags */
       if(!allTags.hasOwnProperty(tag)){
+
         /* [NEW] add generated code to allTags array */
         allTags[tag] = 1;
-      }
+        } else {
+        allTags[tag]++;
+        }
 
     /* END LOOP: for each tag */
 
@@ -268,5 +271,6 @@ function generateTags(){
   const tagList = document.querySelector(optTagsListSelector);
 
   /* [NEW] add html from allTags to tagList */
-  tagList.innerHTML = allTags.join(' ');
+  //tagList.innerHTML = allTags.join(' ');
+  console.log(allTags);
 }
