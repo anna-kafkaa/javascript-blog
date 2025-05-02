@@ -253,9 +253,9 @@ function generateTags(){
       /* add generated code to html variable */
 
       /* [NEW] check if this link is NOT already in allTags */
-      if(allTags.indexOf(linkHTML) == -1){
+      if(!allTags.hasOwnProperty(tag)){
         /* [NEW] add generated code to allTags array */
-        allTags.push(linkHTML);
+        allTags[tag] = 1;
       }
 
     /* END LOOP: for each tag */
