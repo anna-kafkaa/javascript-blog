@@ -7,6 +7,7 @@ const optArticleSelector = '.post',
 
 const optArticleTagsSelector = '.post-tags .list';
 const optArticleAuthorSelector = '.post-author';
+const optTagsListSelector = '.list.tags';
 
 /* Funkcja obsługująca kliknięcie w link */
 function titleClickHandler(event) {
