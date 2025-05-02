@@ -270,6 +270,10 @@ function generateTags(){
   /* [NEW] find list of tags in right column */
   const tagList = document.querySelector(optTagsListSelector);
 
+   /* [NEW] calculate tags parameters (min and max) */
+   const tagsParams = calculateTagsParams(allTags);
+   console.log('tagsParams:', tagsParams);
+
 /* [NEW] create variable for all links HTML code */
 let allTagsHTML = '';
 
