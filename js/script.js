@@ -12,6 +12,8 @@ const optTagsListSelector = '.list.tags';
 const optCloudClassCount = 5;
 const optCloudClassPrefix = 'tag-size-';
 
+const optAuthorsListSelector = '.list.authors';
+
 /* Funkcja obsługująca kliknięcie w link */
 function titleClickHandler(event) {
   event.preventDefault();
