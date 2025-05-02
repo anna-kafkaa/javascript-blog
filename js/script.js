@@ -242,13 +242,14 @@ function generateTags(){
 
     /* get tags from data-tags attribute */
     const articleTags = article.getAttribute('data-tags');
-    
+
     /* split tags into array */
 
     /* START LOOP: for each tag */
 
       /* generate HTML of the link */
-
+      const tagHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
+      
       /* add generated code to html variable */
 
       /* [NEW] check if this link is NOT already in allTags */
