@@ -340,7 +340,11 @@ function generateSidebarTags() {
     console.log('tagLinkHTML:', tagLinkHTML);
 
     /* [NEW] generate code of a link and add it to allTagsHTML */
-    allTagsHTML += tagLinkHTML;
+    allTagsData.tags.push({
+      tag: tag,
+      count: allTags[tag],
+      className: calculateTagClass(allTags[tag], tagsParams)
+    });
 
     /* [NEW] END LOOP: for each tag in allTags: */
   }
