@@ -207,7 +207,7 @@ function generateAuthors() {
   for (let article of articles) {
     const authorWrapper = article.querySelector(optArticleAuthorSelector);
     const author = article.getAttribute('data-author');
-    const authorHTML = '<a href="#author-' + author + '">' + author + '</a>';
+    const authorHTML = templates.articleAuthor({ author: author });
     authorWrapper.innerHTML = authorHTML;
 
     if (!allAuthors.hasOwnProperty(author)) {
