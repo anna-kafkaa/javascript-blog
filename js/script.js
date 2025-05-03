@@ -217,7 +217,7 @@ function generateAuthors() {
     }
   }
   const authorList = document.querySelector(optAuthorsListSelector);
-  let allAuthorsHTML = '';
+  const allAuthorsData = { authors: [] };
 
   for (let author in allAuthors) {
     const authorData = {
@@ -227,7 +227,7 @@ function generateAuthors() {
     allAuthorsData.authors.push(authorData);
   }
 
-  authorList.innerHTML = allAuthorsHTML;
+  authorList.innerHTML = templates.authorList(allAuthorsData);
 }
 
 generateAuthors();
