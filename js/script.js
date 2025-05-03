@@ -97,7 +97,7 @@ function generateTitleLinks(customSelector = ''){
 /* Wywołanie funkcji generującej linki */
 generateTitleLinks();
 
-function generateTags(){
+function generateArticleTags(){
   /* find all articles */
   const articles = document.querySelectorAll(optArticleSelector);
 
@@ -133,7 +133,7 @@ function generateTags(){
   /* END LOOP: for every article: */
 }
 
-generateTags();
+generateArticleTags();
 
 function tagClickHandler(event){
   /* prevent default action for this event */
@@ -205,9 +205,9 @@ function generateAuthors() {
       allAuthors[author] = 1;
     } else {
       allAuthors[author]++;
+    }
   }
-}
-const authorList = document.querySelector(optAuthorsListSelector);
+  const authorList = document.querySelector(optAuthorsListSelector);
   let allAuthorsHTML = '';
 
   for (let author in allAuthors) {
@@ -271,7 +271,7 @@ function calculateTagClass(count, params) {
   return optCloudClassPrefix + classNumber;
 }
 
-function generateTags(){
+function generateSidebarTags() {
   /* [NEW] create a new variable allTags with an empty array */
   let allTags = {};
 
@@ -307,9 +307,9 @@ function generateTags(){
 
         /* [NEW] add generated code to allTags array */
         allTags[tag] = 1;
-        } else {
+      } else {
         allTags[tag]++;
-        }
+      }
 
     /* END LOOP: for each tag */
     }
@@ -322,24 +322,26 @@ function generateTags(){
   /* [NEW] find list of tags in right column */
   const tagList = document.querySelector(optTagsListSelector);
 
-   /* [NEW] calculate tags parameters (min and max) */
-   const tagsParams = calculateTagsParams(allTags);
-   console.log('tagsParams:', tagsParams);
+  /* [NEW] calculate tags parameters (min and max) */
+  const tagsParams = calculateTagsParams(allTags);
+  console.log('tagsParams:', tagsParams);
 
-/* [NEW] create variable for all links HTML code */
-let allTagsHTML = '';
+  /* [NEW] create variable for all links HTML code */
+  let allTagsHTML = '';
 
-/* [NEW] START LOOP: for each tag in allTags: */
-for (let tag in allTags) {
-  const tagLinkHTML = '<li><a href="#tag-' + tag + '" class="' + calculateTagClass(allTags[tag], tagsParams) + '">' + tag + '</a></li>';
-  console.log('tagLinkHTML:', tagLinkHTML);
+  /* [NEW] START LOOP: for each tag in allTags: */
+  for (let tag in allTags) {
+    const tagLinkHTML = '<li><a href="#tag-' + tag + '" class="' + calculateTagClass(allTags[tag], tagsParams) + '">' + tag + '</a></li>';
+    console.log('tagLinkHTML:', tagLinkHTML);
 
-  /* [NEW] generate code of a link and add it to allTagsHTML */
-  allTagsHTML += tagLinkHTML;
+    /* [NEW] generate code of a link and add it to allTagsHTML */
+    allTagsHTML += tagLinkHTML;
 
-/* [NEW] END LOOP: for each tag in allTags: */
+    /* [NEW] END LOOP: for each tag in allTags: */
+  }
+
+  /* [NEW] add html from allTagsHTML to tagList */
+  tagList.innerHTML = allTagsHTML;
 }
 
-/* [NEW] add html from allTagsHTML to tagList */
-tagList.innerHTML = allTagsHTML;
-}
+generateSidebarTags();
