@@ -350,7 +350,7 @@ function generateSidebarTags() {
   }
 
   /* [NEW] add html from allTagsHTML to tagList */
-  tagList.innerHTML = allTagsHTML;
+  tagList.innerHTML = templates.tagCloudLink(allTagsData);
 }
 
 generateSidebarTags();
