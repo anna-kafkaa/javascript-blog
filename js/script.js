@@ -220,7 +220,11 @@ function generateAuthors() {
   let allAuthorsHTML = '';
 
   for (let author in allAuthors) {
-    allAuthorsHTML += '<li><a href="#author-' + author + '">' + author + '</a> (' + allAuthors[author] + ')</li>';
+    const authorData = {
+      author: author,
+      count: allAuthors[author]
+    };
+    allAuthorsData.authors.push(authorData);
   }
 
   authorList.innerHTML = allAuthorsHTML;
