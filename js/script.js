@@ -359,6 +359,7 @@ function generateSidebarTags() {
 
   /* [NEW] add html from allTagsHTML to tagList */
   tagList.innerHTML = templates.tagCloudLink(allTagsData);
+  addClickListenersToTags();
 }
 
 generateSidebarTags();
